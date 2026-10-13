@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        form {
+            max-width: 400px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label.block-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 6px 8px;
+            box-sizing: border-box;
+            border: 1px solid #767676;
+            border-radius: 2px;
+            font-size: 0.95rem;
+        }
+
+        input[type="number"] {
+            width: 80px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-top: 6px;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 90px;
+        }
+
+        .btn-group {
+            margin-top: 15px;
+        }
+
+        .btn-group input[type="submit"],
+        .btn-group input[type="reset"] {
+            padding: 5px 12px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Conference Registration Form</h2>
+
+    <form action="#" method="post">
+        <div class="form-group">
+            <label class="block-label" for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label class="block-label" for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email addres" required>
+        </div>
+
+        <div class="form-group">
+            <label class="block-label" for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="99" value="18" required>
+        </div>
+
+        <div class="form-group">
+            <label class="block-label">Gender:</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="gender" value="Male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Female"> Female
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="block-label" for="country">Country of Residence:</label>
+            <select id="country" name="country">
+                <option value="Malaysia" selected>Malaysia</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Brunei">Brunei</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="block-label">Areas of Interest:</label>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="interest" value="Software Development"> Software Development
+                </label>
+                <label>
+                    <input type="checkbox" name="interest" value="Data Science"> Data Science
+                </label>
+                <label>
+                    <input type="checkbox" name="interest" value="Cybersecurity"> Cybersecurity
+                </label>
+                <label>
+                    <input type="checkbox" name="interest" value="Artificial Intelligence"> Artificial Intelligence
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="block-label">Experience Level:</label>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="experience" value="Beginner"> Beginner
+                </label>
+                <label>
+                    <input type="radio" name="experience" value="Intermediate"> Intermediate
+                </label>
+                <label>
+                    <input type="radio" name="experience" value="Advanced"> Advanced
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="block-label" for="comments">Comments or Questions:</label>
+            <textarea id="comments" name="comments" placeholder="Any comments or questions?"></textarea>
+        </div>
+
+        <div class="btn-group">
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+</body>
+</html>
